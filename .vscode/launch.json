@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainStore",
+            "request": "launch",
+            "mainClass": "MainStore",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "MainPortfolio",
+            "request": "launch",
+            "mainClass": "MainPortfolio",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "Tienda",
+            "request": "launch",
+            "mainClass": "Tienda",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
             "name": "principal",
             "request": "launch",
             "mainClass": "principal",
