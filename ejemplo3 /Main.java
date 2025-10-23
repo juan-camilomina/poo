@@ -38,9 +38,9 @@ public class Main {
                 case 6 -> eliminarElectrodomestico();
                 case 0 -> {
                     guardarDatos();
-                    System.out.println("💾 Datos guardados. ¡Hasta luego!");
+                    System.out.println(" Datos guardados. ¡Hasta luego!");
                 }
-                default -> System.out.println("❌ Opción no válida.");
+                default -> System.out.println(" Opción no válida.");
             }
         } while (opcion != 0);
     }
@@ -57,7 +57,7 @@ public class Main {
         sc.nextLine();
 
         if (index < 0 || index >= MARCAS.length) {
-            System.out.println("⚠️ Opción inválida. Se asignará marca 'Genérica'.");
+            System.out.println(" Opción inválida. Se asignará marca 'Genérica'.");
             return "Genérica";
         }
         return MARCAS[index];
@@ -67,7 +67,7 @@ public class Main {
         String marca = elegirMarca();
         Electrodomestico e = new Electrodomestico(marca);
         lista.add(e);
-        System.out.println("✅ Electrodoméstico agregado: " + marca);
+        System.out.println(" Electrodoméstico agregado: " + marca);
     }
 
     private static void agregarLavadora() {
@@ -77,12 +77,12 @@ public class Main {
         sc.nextLine();
         Lavadora l = new Lavadora(marca, carga);
         lista.add(l);
-        System.out.println("✅ Lavadora agregada: " + marca + " de " + carga + " kg");
+        System.out.println(" Lavadora agregada: " + marca + " de " + carga + " kg");
     }
 
     private static void mostrarTodos() {
         if (lista.isEmpty()) {
-            System.out.println("⚠️ No hay electrodomésticos registrados.");
+            System.out.println(" No hay electrodomésticos registrados.");
             return;
         }
         System.out.println("\n--- Lista de electrodomésticos ---");
@@ -100,7 +100,7 @@ public class Main {
         sc.nextLine();
 
         if (index < 0 || index >= lista.size()) {
-            System.out.println("❌ Índice inválido.");
+            System.out.println(" Índice inválido.");
             return;
         }
 
@@ -114,7 +114,7 @@ public class Main {
         e.setConsumo(sc.nextInt());
         sc.nextLine();
 
-        System.out.println("✅ Electrodoméstico editado correctamente.");
+        System.out.println(" Electrodoméstico editado correctamente.");
     }
 
     private static void encenderElectrodomestico() {
@@ -126,12 +126,12 @@ public class Main {
         sc.nextLine();
 
         if (index < 0 || index >= lista.size()) {
-            System.out.println("❌ Índice inválido.");
+            System.out.println(" Índice inválido.");
             return;
         }
 
         lista.get(index).encender();
-        System.out.println("💡 Electrodoméstico encendido.");
+        System.out.println(" Electrodoméstico encendido.");
     }
 
     private static void eliminarElectrodomestico() {
@@ -143,12 +143,12 @@ public class Main {
         sc.nextLine();
 
         if (index < 0 || index >= lista.size()) {
-            System.out.println("❌ Índice inválido.");
+            System.out.println(" Índice inválido.");
             return;
         }
 
         lista.remove(index);
-        System.out.println("🗑️ Electrodoméstico eliminado.");
+        System.out.println(" Electrodoméstico eliminado.");
     }
 
     // --- GUARDAR Y CARGAR DATOS ---
@@ -164,7 +164,7 @@ public class Main {
                 bw.newLine();
             }
         } catch (IOException ex) {
-            System.out.println("❌ Error al guardar los datos: " + ex.getMessage());
+            System.out.println(" Error al guardar los datos: " + ex.getMessage());
         }
     }
 
@@ -186,9 +186,9 @@ public class Main {
                     lista.add(e);
                 }
             }
-            System.out.println("📂 Datos cargados desde archivo.");
+            System.out.println(" Datos cargados desde archivo.");
         } catch (IOException ex) {
-            System.out.println("❌ Error al cargar los datos: " + ex.getMessage());
+            System.out.println(" Error al cargar los datos: " + ex.getMessage());
         }
     }
 }
