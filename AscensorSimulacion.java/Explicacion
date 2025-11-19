@@ -1,0 +1,15 @@
+mi proyecto simula un ascensor de 10 pisos que puedes controlar desde la consola. Todo está organizado en varias clases para que sea más fácil de entender y manejar.
+
+La clase principal es Ascensor. Aquí es donde sucede todo el movimiento. El ascensor sabe en qué piso está, hacia dónde se mueve, qué pisos le han pedido y controla sus botones y puertas. Cada vez que alguien llama al ascensor o elige un piso dentro de él, el ascensor presiona el botón correspondiente, cierra las puertas antes de moverse, se desplaza piso por piso mostrando si está subiendo o bajando y, al llegar al destino, apaga el botón, abre las puertas y muestra un mensaje de llegada. Además, puede manejar una lista de peticiones, moviéndose automáticamente por todos los pisos solicitados en orden.
+
+Esta clase Boton representa cada botón del ascensor o de los pisos. Cada botón tiene un número de piso y un estado de iluminación, que se enciende cuando se presiona y se apaga al llegar al piso. Esto permite ver claramente qué botones están activos en cada momento.
+
+Esta clase Puertas se encarga de abrir y cerrar las puertas del ascensor. Cada vez que el ascensor se mueve o llega a un piso, se muestra un mensaje indicando si las puertas están abiertas o cerradas, haciendo la simulación más realista.
+
+Esta clase  Piso representa cada piso del edificio. Cada piso tiene su número y botones de subir y bajar, dependiendo de si está en medio, en el primero o en el último piso. Esto simula los botones que normalmente encontramos en los pasillos para pedir el ascensor.
+
+Esta clase  ControlAscensor funciona como el cerebro que conecta al usuario con el ascensor. Permite mostrar un menú con tres opciones: llamar al ascensor a un piso, elegir un piso destino dentro del ascensor o salir de la aplicación. Cuando se selecciona un piso, esta clase agrega la petición al ascensor y hace que se mueva automáticamente.
+
+Finalmente, la clase Main arranca todo el programa. Crea un objeto ControlAscensor y llama al método para iniciar la simulación.
+
+En conjunto, todo funciona como un ascensor real: puedes pedirlo, elegir pisos, ver cómo se encienden y apagan los botones, y observar cómo las puertas se abren y cierran al llegar a cada piso. Todo esto se muestra de forma clara en la consola, paso a paso, haciendo la experiencia muy visual y entendible.

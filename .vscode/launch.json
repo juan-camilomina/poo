@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "POO_Final_Ascensor",
+            "request": "launch",
+            "mainClass": "POO_Final_Ascensor",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "AscensorSimulacion",
+            "request": "launch",
+            "mainClass": "AscensorSimulacion",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "SimulacionAscensor10Pisos",
+            "request": "launch",
+            "mainClass": "SimulacionAscensor10Pisos",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
             "name": "ejecutarHerenciaAnimal",
             "request": "launch",
             "mainClass": "ejemplo1.ejecutarHerenciaAnimal",

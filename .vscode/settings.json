@@ -1,3 +1,10 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "clase 9",
+        "Clase 1",
+        "Asensor.java",
+        "AscensorSimulacion.java",
+        "Acensormario.java"
+    ]
 }
