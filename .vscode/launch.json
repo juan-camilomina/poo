@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "SistemaPuerto.Main",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
             "name": "EjecutarMoto",
             "request": "launch",
             "mainClass": "semana3.EjecutarMoto",
