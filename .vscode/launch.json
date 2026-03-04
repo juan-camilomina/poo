@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EjecutarMoto",
+            "request": "launch",
+            "mainClass": "semana3.EjecutarMoto",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "ejercicios",
+            "request": "launch",
+            "mainClass": "clase11.ejercicios",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "ejercicios",
+            "request": "launch",
+            "mainClass": "ejercicios",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
             "name": "POO_Final_Ascensor",
             "request": "launch",
             "mainClass": "POO_Final_Ascensor",
