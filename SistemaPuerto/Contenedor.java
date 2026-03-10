@@ -1,6 +1,7 @@
 package SistemaPuerto;
 
 public class Contenedor {
+
     private String codigo;
     private double peso;
     private String tipo;
