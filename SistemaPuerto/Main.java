@@ -1,3 +1,5 @@
+package SistemaPuerto;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,54 +13,59 @@ public class Main {
         do {
             System.out.println("\n=== SISTEMA DE PUERTO ===");
             System.out.println("1. Registrar Buque");
-            System.out.println("2. Atender Buque");
-            System.out.println("3. Mostrar Contenedores");
-            System.out.println("4. Buscar Contenedor");
+            System.out.println("2. Registrar Contenedores de un Buque");
+            System.out.println("3. Mostrar peso total de contenedores");
+            System.out.println("4. Listar contenedores por tipo");
+            System.out.println("5. Mostrar estado del puerto");
             System.out.println("0. Salir");
-            System.out.print("Seleccione una opcion: ");
+            System.out.print("Seleccione una opción: ");
             opcion = sc.nextInt();
             sc.nextLine();
 
             switch (opcion) {
-
                 case 1:
                     System.out.print("Nombre del buque: ");
                     String nombre = sc.nextLine();
                     Buque buque = new Buque(nombre);
+                    puerto.registrarBuque(buque);
+                    break;
 
-                    System.out.print("Cuantos contenedores trae: ");
+                case 2:
+                    System.out.print("Nombre del buque: ");
+                    String nombreBuscado = sc.nextLine();
+                    Buque buqueEncontrado = puerto.buscarBuquePorNombre(nombreBuscado);
+
+                    if (buqueEncontrado == null) {
+                        System.out.println("Buque no encontrado.");
+                        break;
+                    }
+
+                    System.out.print("Cuántos contenedores registrar: ");
                     int cantidad = sc.nextInt();
                     sc.nextLine();
 
                     for (int i = 0; i < cantidad; i++) {
                         System.out.println("Contenedor " + (i + 1));
-                        System.out.print("Codigo: ");
-                        String codigo = sc.nextLine();
                         System.out.print("Peso: ");
                         double peso = sc.nextDouble();
                         sc.nextLine();
                         System.out.print("Tipo: ");
                         String tipo = sc.nextLine();
 
-                        Contenedor c = new Contenedor(codigo, peso, tipo);
-                        buque.agregarContenedor(c);
+                        puerto.registrarContenedor(peso, tipo, buqueEncontrado);
                     }
-
-                    puerto.llegadaBuque(buque);
-                    break;
-
-                case 2:
-                    puerto.atenderBuque();
                     break;
 
                 case 3:
-                    puerto.mostrarContenedores();
+                    System.out.println("Peso total de contenedores: " + puerto.pesoTotal() + " kg");
                     break;
 
                 case 4:
-                    System.out.print("Ingrese codigo del contenedor: ");
-                    String codigoBuscar = sc.nextLine();
-                    puerto.buscarContenedor(codigoBuscar);
+                    puerto.listarPorTipo();
+                    break;
+
+                case 5:
+                    puerto.mostrarMatriz();
                     break;
 
                 case 0:
@@ -66,7 +73,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Opcion invalida.");
+                    System.out.println("Opción inválida.");
             }
 
         } while (opcion != 0);

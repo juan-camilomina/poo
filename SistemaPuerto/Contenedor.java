@@ -1,3 +1,5 @@
+package SistemaPuerto;
+
 public class Contenedor {
     private String codigo;
     private double peso;
@@ -23,8 +25,6 @@ public class Contenedor {
 
     @Override
     public String toString() {
-        return "Codigo: " + codigo + 
-               " | Peso: " + peso + 
-               " | Tipo: " + tipo;
+        return "Código: " + codigo + " | Peso: " + peso + " | Tipo: " + tipo;
     }
 }

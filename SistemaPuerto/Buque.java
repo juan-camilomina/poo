@@ -1,3 +1,5 @@
+package SistemaPuerto;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,5 +22,9 @@ public class Buque {
 
     public List<Contenedor> getContenedores() {
         return contenedores;
+    }
+
+    public int cantidadContenedores() {
+        return contenedores.size();
     }
 }
