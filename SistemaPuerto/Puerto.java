@@ -1,6 +1,6 @@
 package SistemaPuerto;
 
-import java.util.*;
+import java.util.Random;
 
 public class Puerto {
 
@@ -8,46 +8,41 @@ public class Puerto {
     private Contenedor[][] matriz = new Contenedor[10][10];
     private int contadorCodigo = 1;
 
-    private String[] tiposCarga = {
-        "Alimentos",
-        "Electrónica",
-        "Ropa",
-        "Vehículos",
-        "Medicamentos",
-        "Maquinaria",
-        "Químicos",
-        "Herramientas"
-    };
-
     Random random = new Random();
 
-    public boolean registrarBuque(Buque buque) {
+    String[] tipos = {
+        "Alimentos",
+        "Electrodomesticos",
+        "Ropa",
+        "Vehiculos",
+        "Medicinas"
+    };
 
-        for (int i = 0; i < buques.length; i++) {
+    public void generarPuertoAutomatico() {
 
-            if (buques[i] == null) {
+        String[] nombres = {
+            "Titanic",
+            "Poseidon",
+            "Atlantic",
+            "Pacific",
+            "Neptune"
+        };
 
-                buques[i] = buque;
+        for (int i = 0; i < nombres.length; i++) {
 
-                System.out.println("Buque registrado: " + buque.getNombre());
+            Buque b = new Buque(nombres[i]);
+            buques[i] = b;
 
-                return true;
+            int cantidad = random.nextInt(5) + 3;
+
+            for (int j = 0; j < cantidad; j++) {
+
+                double peso = 500 + random.nextInt(2000);
+                String tipo = tipos[random.nextInt(tipos.length)];
+
+                registrarContenedor(peso, tipo, b);
             }
         }
-
-        return false;
-    }
-
-    public Buque buscarBuquePorNombre(String nombre) {
-
-        for (Buque b : buques) {
-
-            if (b != null && b.getNombre().equalsIgnoreCase(nombre)) {
-                return b;
-            }
-        }
-
-        return null;
     }
 
     public boolean registrarContenedor(double peso, String tipo, Buque buque) {
@@ -57,21 +52,31 @@ public class Puerto {
         Contenedor c = new Contenedor(codigo, peso, tipo);
 
         for (int fila = 9; fila >= 0; fila--) {
-
             for (int col = 0; col < 10; col++) {
 
                 if (matriz[fila][col] == null) {
 
                     matriz[fila][col] = c;
-
                     buque.agregarContenedor(c);
-
                     return true;
                 }
             }
         }
 
         return false;
+    }
+
+    public void mostrarBuques() {
+
+        System.out.println("\nBUQUES");
+
+        for (Buque b : buques) {
+            if (b != null) {
+                System.out.println(b.getNombre() +
+                        " | Contenedores: " +
+                        b.cantidadContenedores());
+            }
+        }
     }
 
     public void mostrarMatriz() {
@@ -87,6 +92,7 @@ public class Puerto {
                 } else {
                     System.out.print("[ ]\t");
                 }
+
             }
 
             System.out.println();
@@ -98,7 +104,6 @@ public class Puerto {
         double total = 0;
 
         for (int fila = 0; fila < 10; fila++) {
-
             for (int col = 0; col < 10; col++) {
 
                 if (matriz[fila][col] != null) {
@@ -110,80 +115,32 @@ public class Puerto {
         return total;
     }
 
-    public void listarPorTipo() {
+    public void totalContenedores() {
 
-        Map<String, List<Contenedor>> grupos = new HashMap<>();
+        int total = 0;
 
         for (int fila = 0; fila < 10; fila++) {
-
             for (int col = 0; col < 10; col++) {
 
-                Contenedor c = matriz[fila][col];
-
-                if (c != null) {
-
-                    grupos.computeIfAbsent(c.getTipo(), k -> new ArrayList<>()).add(c);
-
+                if (matriz[fila][col] != null) {
+                    total++;
                 }
             }
         }
 
-        for (String tipo : grupos.keySet()) {
-
-            System.out.println("\nTipo: " + tipo);
-
-            for (Contenedor c : grupos.get(tipo)) {
-
-                System.out.println(c);
-
-            }
-        }
+        System.out.println("Total de contenedores: " + total);
     }
 
-    public void mostrarBuques() {
+    public void mostrarContenedores() {
 
-        System.out.println("\nBUQUES REGISTRADOS");
+        System.out.println("\nLISTA DE CONTENEDORES");
 
-        for (Buque b : buques) {
+        for (int fila = 0; fila < 10; fila++) {
+            for (int col = 0; col < 10; col++) {
 
-            if (b != null) {
-
-                System.out.println(
-                    b.getNombre() +
-                    " | Contenedores: " +
-                    b.cantidadContenedores()
-                );
-            }
-        }
-    }
-
-    // ⭐ GENERACIÓN AUTOMÁTICA DEL PUERTO
-    public void generarPuertoAutomatico() {
-
-        String[] nombresBuques = {
-            "Poseidon",
-            "Titanic",
-            "Atlantic",
-            "Neptune",
-            "Pacific",
-            "Mercury"
-        };
-
-        for (String nombre : nombresBuques) {
-
-            Buque b = new Buque(nombre);
-
-            registrarBuque(b);
-
-            int cantidadContenedores = random.nextInt(8) + 3;
-
-            for (int i = 0; i < cantidadContenedores; i++) {
-
-                double peso = 500 + random.nextInt(2500);
-
-                String tipo = tiposCarga[random.nextInt(tiposCarga.length)];
-
-                registrarContenedor(peso, tipo, b);
+                if (matriz[fila][col] != null) {
+                    System.out.println(matriz[fila][col]);
+                }
             }
         }
     }

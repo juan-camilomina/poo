@@ -21,10 +21,6 @@ public class Buque {
         contenedores.add(c);
     }
 
-    public List<Contenedor> getContenedores() {
-        return contenedores;
-    }
-
     public int cantidadContenedores() {
         return contenedores.size();
     }

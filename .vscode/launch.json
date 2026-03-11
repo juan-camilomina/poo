@@ -8,6 +8,27 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "taller.Main",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "GalacticExpress",
+            "request": "launch",
+            "mainClass": "GalacticExpress",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "GalacticExpress",
+            "request": "launch",
+            "mainClass": "taller.GalacticExpress",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "SistemaPuerto.Main",
             "projectName": "poo_aff1c92e"
         },

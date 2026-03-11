@@ -24,8 +24,7 @@ public class Contenedor {
         return tipo;
     }
 
-    @Override
     public String toString() {
-        return "Código: " + codigo + " | Peso: " + peso + " | Tipo: " + tipo;
+        return "Codigo: " + codigo + " | Peso: " + peso + " | Tipo: " + tipo;
     }
 }
