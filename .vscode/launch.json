@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "SistemaGalacticExpress.Main",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "taller.Main",
             "projectName": "poo_aff1c92e"
         },
