@@ -30,7 +30,7 @@ public class Main {
         System.out.println("\n\nValores filtrados (multiplos de 10):");
         System.out.println(filtrados);
 
-        // 🔹 Paso 2: Matriz 3x3
+        //  Paso 2: Matriz 3x3
         int[][] mapaCarga = new int[3][3];
         int index = 0;
 

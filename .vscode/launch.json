@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SimulacionSupermercado",
+            "request": "launch",
+            "mainClass": "SimulacionSupermercado.SimulacionSupermercado",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio9_4",
+            "request": "launch",
+            "mainClass": "Ejercicio9_4.Ejercicio9_4",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "PilasMultiples",
+            "request": "launch",
+            "mainClass": "Ejercicio9_4.PilasMultiples",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "PilasMultiples",
+            "request": "launch",
+            "mainClass": "PilasMultiples",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "BalanceoExpresion",
+            "request": "launch",
+            "mainClass": "BalanceoExpresion.BalanceoExpresion",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "pila",
+            "request": "launch",
+            "mainClass": "pila",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "PilaDinamica",
+            "request": "launch",
+            "mainClass": "PilaDinamica",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "ExplicacionPila",
+            "request": "launch",
+            "mainClass": "semana7.ExplicacionPila",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "explicacionpila",
+            "request": "launch",
+            "mainClass": "semana7.explicacionpila",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "SistemaGalacticExpress.Main",
