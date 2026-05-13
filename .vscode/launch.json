@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Momento3.Main",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "SistemaUniversitario",
+            "request": "launch",
+            "mainClass": "Momento3.SistemaUniversitario",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "TallerJava.Main",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "momento2.Main",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
+            "name": "PuertoDataBay",
+            "request": "launch",
+            "mainClass": "PuertoDataBay",
+            "projectName": "poo_aff1c92e"
+        },
+        {
+            "type": "java",
             "name": "SimulacionCarritos",
             "request": "launch",
             "mainClass": "SimulacionCarritos.SimulacionCarritos",
